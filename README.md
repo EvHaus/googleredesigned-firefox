@@ -16,6 +16,7 @@ npm install
 ## Live Development
 
 ```
+cfx
 grunt dev
 ```
 
