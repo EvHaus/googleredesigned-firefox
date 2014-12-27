@@ -1,0 +1,28 @@
+{
+	"name": "googleredesigned",
+	"title": "Google Redesigned",
+	"id": "cc85cd4e-5a5b-4eda-a25c-bdaffa93b406",
+	"description": "A complete redesign of popular Google services, Google Redesigned changes the appearance of popular Google services.",
+	"author": "Globex Designs, Inc.",
+	"license": "MPL 2.0",
+	"version": "3.0.0",
+	"icon": "data/img/icon-64.png",
+	"icon64": "data/img/icon-64.png",
+	"preferences": [{
+		"description": "Use nightly development versions (not recommended)",
+		"name": "mode",
+		"title": "Mode",
+		"type": "bool",
+		"value": false
+	}],
+	"devDependencies": {
+		"grunt": "latest",
+		"grunt-contrib-watch": "latest",
+		"grunt-shell": "latest",
+		"react-tools": "^0.12.2"
+	},
+	"scripts": {
+		"install": "bower install",
+		"build:jsx": "jsx --follow-requires -x jsx --no-cache-dir data/jsx data/js"
+	}
+}

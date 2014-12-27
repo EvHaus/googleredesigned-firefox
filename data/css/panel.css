@@ -1,0 +1,87 @@
+body {
+	background: linear-gradient( to left top, #FFF, #F9F9F9);
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	margin: 0;
+}
+
+.panel {
+	list-style: none;
+	margin: 0;
+	padding: 2px;
+}
+
+	.panel li {
+		border-bottom: 1px solid #DDD;
+		color: #000;
+		cursor: pointer;
+		font-size: 12px;
+		padding: 4px 10px 5px;
+		text-shadow: #FFF 0 1px 0;
+		transition: 0.3s background ease, 0.3s box-shadow ease;
+	}
+
+	.panel li.disabled.disabled {color: #999}
+	.panel li.error {color: #790505}
+
+	.panel li:hover {
+		background: #EEE;
+		box-shadow: rgba(0,0,0,0.2) 0 0 5px inset;
+	}
+
+	.panel li:first-child {
+		border-radius: 4px 4px 0 0
+	}
+
+	.panel li:last-child {
+		border-bottom: 0;
+		border-radius: 0 0 4px 4px
+	}
+
+		.panel .version {
+			color: #999;
+			float: right;
+			font-size: 9px;
+			margin: 2px 0 0;
+		}
+
+		.panel .icon {
+			background: linear-gradient( to left top, #77d648, #3f9926);
+			border-radius: 8px;
+			box-shadow: #FFF 1px 1px 0;
+			display: block;
+			float: left;
+			height: 8px;
+			margin: 5px 6px 0 -4px;
+			width: 8px;
+		}
+
+		.panel .disabled.disabled .icon {
+			background: linear-gradient( to left top, #DDD, #BBB);
+		}
+
+		.panel .error .icon {
+			background: linear-gradient( to left top, #980808, #790505);
+		}
+
+		.panel .message {
+			display: block;
+			font-size: 9px;
+		}
+
+	.panel .checker {
+		font-size: 11px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.panel .donate,
+	.panel .bugs {
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.panel .loading {
+		color: #999;
+		cursor: default;
+	}
