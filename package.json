@@ -15,6 +15,14 @@
 		"type": "bool",
 		"value": false
 	}],
+	"translators": [
+		"Wes - es-ES",
+		"Francesco Laffi - it",
+		"Nedim S. - bs-BA",
+		"DivinoAG - pt-BR",
+		"tomvd - nl",
+		"Birion - cs"
+	],
 	"devDependencies": {
 		"grunt": "latest",
 		"grunt-contrib-watch": "latest",

@@ -25,3 +25,5 @@ grunt dev
 ```
 cfx xpi
 ```
+
+Then manually update the install.rdf file inside the .xpi package with the changes in `install.rdf.diff`
