@@ -2,7 +2,7 @@
 
 This is the official Google Redesigned add-on for Firefox. It's licensed under MPL 2.0.
 
-The extension was built using [Firefox Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK) and can be compiled using:
+The extension was built using [Firefox Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK).
 
 For more info visit: http://www.globexdesigns.com/products/gr
 
