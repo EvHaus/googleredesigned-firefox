@@ -9,7 +9,6 @@
 	"icon": "data/img/icon-64.png",
 	"icon64": "data/img/icon-64.png",
 	"preferences": [{
-		"description": "Use nightly development versions (not recommended)",
 		"name": "mode",
 		"title": "Mode",
 		"type": "bool",

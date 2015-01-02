@@ -13,6 +13,7 @@ var PanelComponent = React.createClass({displayName: "PanelComponent",
 
 	getDefaultProps: function () {
 		return {
+			locales: {},
 			manifest: {},
 			mode: null,
 			styles: {},
@@ -64,13 +65,13 @@ var PanelComponent = React.createClass({displayName: "PanelComponent",
 			React.createElement("ul", {className: "panel"}, 
 				styles, 
 				React.createElement("li", {className: this.props.updating ? "loading checker" : "checker", onClick: this.handleClickCheck}, 
-					this.props.updating ? 'Loading...' : 'Check For Style Updates'
+					this.props.updating ? this.props.locales.loading : this.props.locales.check_for_updates
 				), 
 				React.createElement("li", {className: "donate", onClick: this.handleClickDonation}, 
-					"Make a Donation"
+					this.props.locales.make_a_donation
 				), 
 				React.createElement("li", {className: "bugs", onClick: this.handleClickBugs}, 
-					"Submit Bug Report"
+					this.props.locales.submit_bug_report
 				)
 			)
 		);
@@ -98,6 +99,7 @@ var PanelComponent = React.createClass({displayName: "PanelComponent",
 // When the panel's "show" event is triggered
 self.port.on("show", function (data) {
 	React.render(React.createElement(PanelComponent, {
+		locales: data.locales, 
 		manifest: data.manifest, 
 		mode: data.mode, 
 		styles: data.styles, 
