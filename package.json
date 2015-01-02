@@ -9,7 +9,7 @@
 	"icon": "data/img/icon-64.png",
 	"icon64": "data/img/icon-64.png",
 	"preferences": [{
-		"name": "mode",
+		"name": "dev",
 		"title": "Mode",
 		"type": "bool",
 		"value": false
