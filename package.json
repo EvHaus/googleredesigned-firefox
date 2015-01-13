@@ -24,8 +24,10 @@
 	],
 	"devDependencies": {
 		"grunt": "latest",
+		"grunt-contrib-clean": "latest",
 		"grunt-contrib-watch": "latest",
 		"grunt-shell": "latest",
+		"grunt-zip": "latest",
 		"react-tools": "^0.12.2"
 	},
 	"scripts": {

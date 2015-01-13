@@ -23,7 +23,7 @@ grunt dev
 ## Building the Addon
 
 ```
-cfx xpi
+grunt build
 ```
 
 Then manually update the install.rdf file inside the .xpi package with the changes in `install.rdf.diff`
