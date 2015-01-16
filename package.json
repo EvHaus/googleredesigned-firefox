@@ -5,7 +5,7 @@
 	"description": "A complete redesign of popular Google services, Google Redesigned changes the appearance of popular Google services.",
 	"author": "Globex Designs, Inc.",
 	"license": "MPL 2.0",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"icon": "data/img/icon-64.png",
 	"icon64": "data/img/icon-64.png",
 	"preferences": [{
