@@ -4,13 +4,13 @@
 	"id": "{cc85cd4e-5a5b-4eda-a25c-bdaffa93b406}",
 	"description": "A complete redesign of popular Google services, Google Redesigned changes the appearance of popular Google services.",
 	"author": "Globex Designs, Inc.",
-	"license": "MPL 2.0",
-	"version": "3.0.3",
+	"repository": "https://github.com/globexdesigns/googleredesigned-firefox",
+	"license": "MPL-2.0",
+	"version": "3.1.0",
 	"icon": "data/img/icon-64.png",
-	"icon64": "data/img/icon-64.png",
 	"preferences": [{
 		"name": "dev",
-		"title": "Mode",
+		"title": "Development Mode",
 		"type": "bool",
 		"value": false
 	}],
@@ -22,16 +22,21 @@
 		"tomvd - nl",
 		"Birion - cs"
 	],
+	"dependencies": {
+		"react": "0.14.0"
+	},
 	"devDependencies": {
+		"eslint": "latest",
+		"eslint-plugin-react": "latest",
 		"grunt": "latest",
+		"grunt-babel": "latest",
 		"grunt-contrib-clean": "latest",
 		"grunt-contrib-watch": "latest",
 		"grunt-shell": "latest",
-		"grunt-zip": "latest",
-		"react-tools": "^0.12.2"
+		"grunt-zip": "latest"
 	},
 	"scripts": {
-		"install": "bower install",
-		"build:jsx": "jsx --follow-requires -x jsx --no-cache-dir data/jsx data/js"
+		"build": "grunt build",
+		"dev": "grunt dev"
 	}
 }

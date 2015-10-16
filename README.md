@@ -9,24 +9,26 @@ For more info visit: http://www.globexdesigns.com/products/gr
 ## Installation
 
 ```
-npm install grunt-cli -g
+npm install grunt-cli jpm -g
 npm install
 ```
 
 ## Live Development
 
 ```
-cfx
-grunt dev
+npm run dev
 ```
+
+A new Firefox window be launched anytime you modify a file.
 
 ## Building the Addon
 
 ```
-grunt build
+npm run build
 ```
 
-Then manually update the install.rdf file inside the .xpi package with the changes in `install.rdf.diff`
+Then manually update the install.rdf file inside the .xpi package with the
+changes in `install.rdf.diff`
 
 ## Support for SeaMonkey
 

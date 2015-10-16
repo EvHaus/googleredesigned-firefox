@@ -1,15 +1,20 @@
 /* global self, React */
 
-"use strict";
-
 /**
  * Renders the contents of the panel
  * @method render
- *
  * @param	{object}	data		- Data from the panel show event
- *
  */
-var PanelComponent = React.createClass({
+const PanelComponent = React.createClass({
+	displayName: "PanelComponent",
+
+	propTypes: {
+		locales: React.PropTypes.object,
+		manifest: React.PropTypes.arrayOf(React.PropTypes.object),
+		mode: React.PropTypes.string,
+		styles: React.PropTypes.object,
+		updating: React.PropTypes.bool
+	},
 
 	getDefaultProps: function () {
 		return {
@@ -24,12 +29,12 @@ var PanelComponent = React.createClass({
 	render: function () {
 
 		// Render style items
-		var styles = [], prefs, cls, message, error;
+		const styles = [];
+		let prefs, cls, message, error;
 		if (this.props.manifest) {
 			this.props.manifest.forEach(function (style) {
-				for (var name in style) {
-					if (name == 'images') continue;
-
+				Object.keys(style).forEach(function (name) {
+					if (name === 'images') return;
 					prefs = this.props.styles[name];
 					cls = "style";
 					if (prefs.disabled) cls += " disabled";
@@ -57,7 +62,7 @@ var PanelComponent = React.createClass({
 							{message}
 						</li>
 					);
-				}
+				}.bind(this));
 			}.bind(this));
 		}
 
@@ -98,12 +103,13 @@ var PanelComponent = React.createClass({
 
 // When the panel's "show" event is triggered
 self.port.on("show", function (data) {
-	React.render(<PanelComponent
-		locales={data.locales}
-		manifest={data.manifest}
-		mode={data.mode}
-		styles={data.styles}
-		updating={data.updating} />,
+	React.render(
+		<PanelComponent
+			locales={data.locales}
+			manifest={data.manifest}
+			mode={data.mode}
+			styles={data.styles}
+			updating={data.updating} />,
 		document.body
 	);
 });
