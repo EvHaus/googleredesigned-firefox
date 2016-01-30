@@ -15,6 +15,9 @@ npm install
 
 ## Live Development
 
+__The live development commands currently assume you're on Windows, with the 64-bit
+version of Firefox installed.__
+
 ```
 npm run dev
 ```

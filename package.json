@@ -1,12 +1,12 @@
 {
-	"name": "googleredesigned",
+	"name": "googleredesigned-firefox",
 	"title": "Google Redesigned",
 	"id": "{cc85cd4e-5a5b-4eda-a25c-bdaffa93b406}",
 	"description": "A complete redesign of popular Google services, Google Redesigned changes the appearance of popular Google services.",
 	"author": "Globex Designs, Inc.",
 	"repository": "https://github.com/globexdesigns/googleredesigned-firefox",
 	"license": "MPL-2.0",
-	"version": "3.1.0",
+	"version": "3.1.1",
 	"icon": "data/img/icon-64.png",
 	"preferences": [{
 		"name": "dev",
@@ -23,13 +23,15 @@
 		"Birion - cs"
 	],
 	"dependencies": {
-		"react": "0.14.0"
+		"react": "0.14.7",
+		"react-dom": "0.14.7"
 	},
 	"devDependencies": {
+		"babel-eslint": "<5.0.0",
 		"eslint": "latest",
 		"eslint-plugin-react": "latest",
 		"grunt": "latest",
-		"grunt-babel": "latest",
+		"grunt-babel": "<6.0.0",
 		"grunt-contrib-clean": "latest",
 		"grunt-contrib-watch": "latest",
 		"grunt-shell": "latest",

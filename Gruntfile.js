@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 		},
 		shell: {
 			run: {
-				command: 'jpm run'
+				command: 'jpm run -b "C:\\Program Files\\Mozilla Firefox\\firefox.exe"'
 			}
 		},
 		unzip: {
