@@ -22,9 +22,8 @@
 		"tomvd - nl",
 		"Birion - cs"
 	],
-	"dependencies": {
-		"react": "0.14.7",
-		"react-dom": "0.14.7"
+	"engines": {
+		"firefox": ">=38.0a1"
 	},
 	"devDependencies": {
 		"babel-eslint": "<5.0.0",
@@ -32,10 +31,9 @@
 		"eslint-plugin-react": "latest",
 		"grunt": "latest",
 		"grunt-babel": "<6.0.0",
-		"grunt-contrib-clean": "latest",
+		"grunt-contrib-rename": "latest",
 		"grunt-contrib-watch": "latest",
-		"grunt-shell": "latest",
-		"grunt-zip": "latest"
+		"grunt-shell": "latest"
 	},
 	"scripts": {
 		"build": "grunt build",

@@ -7,20 +7,27 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		clean: {
-			build: [
-				'xpi/resources/googleredesigned/data/jsx'
-			],
-			xpi: ['googleredesigned.xpi'],
-			xpidir: ['xpi']
+		rename: {
+			prebuild: {
+				files: [{
+					src: 'node_modules',
+					dest: '.node_modules'
+				}]
+			},
+			postbuild: {
+				files: [{
+					src: '.node_modules',
+					dest: 'node_modules'
+				}]
+			}
 		},
 		shell: {
 			run: {
 				command: 'jpm run -b "C:\\Program Files\\Mozilla Firefox\\firefox.exe"'
+			},
+			build: {
+				command: 'jpm xpi'
 			}
-		},
-		unzip: {
-			'./xpi': './googleredesigned.xpi'
 		},
 		watch: {
 			scripts: {
@@ -50,17 +57,14 @@ module.exports = function (grunt) {
 	grunt.registerTask('dev', ['babel', 'shell:run', 'watch']);
 	grunt.registerTask('build', [
 		'babel',
-		'unzip',
-		'clean:xpi',
-		'clean:build',
-		'zip',
-		'clean:xpidir'
+		'rename:prebuild',
+		'shell:build',
+		'rename:postbuild'
 	]);
 
 	// Load plugins
 	grunt.loadNpmTasks('grunt-babel');
-	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-rename');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-shell');
-	grunt.loadNpmTasks('grunt-zip');
 };

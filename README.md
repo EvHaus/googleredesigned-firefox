@@ -30,9 +30,6 @@ A new Firefox window be launched anytime you modify a file.
 npm run build
 ```
 
-Then manually update the install.rdf file inside the .xpi package with the
-changes in `install.rdf.diff`
-
 ## Support for SeaMonkey
 
 Currently not possible. Pending Addon SDK support in SeaMonkey 2.33 (http://forums.mozillazine.org/viewtopic.php?f=19&t=2902001)
