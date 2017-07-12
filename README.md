@@ -1,5 +1,11 @@
 # Google Redesigned
 
+===========================================
+
+# THIS REPO IS DEPRECATED. USE https://github.com/EvHaus/google-redesigned INSTEAD.
+
+===========================================
+
 This is the official Google Redesigned add-on for Firefox. It's licensed under MPL 2.0.
 
 The extension was built using [Firefox Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK).
